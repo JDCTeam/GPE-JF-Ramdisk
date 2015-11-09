@@ -133,24 +133,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
         user camera
         group camera system inet input graphics net_bt_stack
 
-
-service thermald /system/bin/thermald
-   class main
-   user root
-   group root
-   disabled
-
-service thermal-engine /system/bin/thermal-engine
-   class main
-   user root
-   group root
-   disabled
-
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-   class main
-   user root
-   disabled
-
 service rf4ce /system/bin/rf4ce
    class main
    user root
