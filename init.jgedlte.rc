@@ -747,5 +747,6 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     disabled
     oneshot
 
+# JDCTeam Tweaks
 on property:jdctweaks.activate=1
     write /sys/devices/virtual/timed_output/vibrator/pwm_value 50
