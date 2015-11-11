@@ -611,6 +611,8 @@ service wifi-crda /system/bin/sh /system/etc/init.crda.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+    # JDCTeam Tweaks
+    setprop jdctweaks.activate 1
 
 service atfwd /system/bin/ATFWD-daemon
     class late_start
@@ -744,3 +746,6 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     group system qcom_diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
+
+on property:jdctweaks.activate=1
+    write /sys/devices/virtual/timed_output/vibrator/pwm_value 50
