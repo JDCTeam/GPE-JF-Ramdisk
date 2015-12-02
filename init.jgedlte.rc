@@ -750,3 +750,8 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
 # JDCTeam Tweaks
 on property:jdctweaks.activate=1
     write /sys/devices/virtual/timed_output/vibrator/pwm_value 50
+    write /sys/kernel/msm_thermal/enabled 0
+    write /sys/kernel/msm_thermal/low_thresh "1350000 56 53"
+    write /sys/kernel/msm_thermal/mid_thresh "1026000 62 59"
+    write /sys/kernel/msm_thermal/high_thresh "810000 68 64"
+    write /sys/kernel/msm_thermal/enabled 1
