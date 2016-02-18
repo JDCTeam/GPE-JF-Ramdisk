@@ -760,3 +760,4 @@ on property:jdctweaks.activate=1
     write /sys/devices/system/cpu/cpufreq/badass/up_threshold 90
     write /sys/devices/system/cpu/cpufreq/badass/down_differential 10
     write /sys/devices/system/cpu/cpufreq/badass/sampling_down_factor 4
+    write /sys/kernel/msm_mpdecision/conf/enabled 1
